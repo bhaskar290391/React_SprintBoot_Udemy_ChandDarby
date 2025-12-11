@@ -18,6 +18,7 @@ function App() {
             </thead>
             <tbody>
               <TodoRowItems />
+              <TodoRowItems />
 
               <tr>
                 <th scope="row">2</th>
