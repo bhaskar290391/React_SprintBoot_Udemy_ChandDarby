@@ -2,6 +2,23 @@ import "./App.css";
 import TodoRowItems from "./components/TodoRowItems";
 
 function App() {
+  const todoList = [
+    {
+      rowNumber: 1,
+      rowDescription: "Feeding Puppy",
+      rowAssigned: "User One",
+    },
+    {
+      rowNumber: 2,
+      rowDescription: "Water Plant",
+      rowAssigned: "User Two",
+    },
+    {
+      rowNumber: 3,
+      rowDescription: "Make Dinner For Puppy",
+      rowAssigned: "User One",
+    },
+  ];
   return (
     <div className="mt-5 conatiner">
       <div className="card">
@@ -17,14 +34,23 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <TodoRowItems />
-              <TodoRowItems />
+              <TodoRowItems
+                rowNumber={todoList[0].rowNumber}
+                rowDescription={todoList[0].rowDescription}
+                rowAssigned={todoList[0].rowAssigned}
+              />
 
-              <tr>
-                <th scope="row">2</th>
-                <td>Haircut</td>
-                <td>Eric Robby</td>
-              </tr>
+              <TodoRowItems
+                rowNumber={todoList[1].rowNumber}
+                rowDescription={todoList[1].rowDescription}
+                rowAssigned={todoList[1].rowAssigned}
+              />
+
+              <TodoRowItems
+                rowNumber={todoList[2].rowNumber}
+                rowDescription={todoList[2].rowDescription}
+                rowAssigned={todoList[2].rowAssigned}
+              />
             </tbody>
           </table>
         </div>
