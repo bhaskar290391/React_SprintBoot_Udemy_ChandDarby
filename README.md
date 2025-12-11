@@ -41,3 +41,8 @@ npm install web-vitals
 # Local:
 
 http://localhost:3000
+
+#Bootstrap
+https://getbootstrap.com/
+
+# adding bootstrap configuration in index.html
