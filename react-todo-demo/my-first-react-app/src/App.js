@@ -1,4 +1,5 @@
 import "./App.css";
+import NewTodoForm from "./components/NewTodoForm";
 import TodoTableItems from "./components/TodoTableItem";
 import React, { useState } from "react";
 
@@ -70,6 +71,8 @@ function App() {
           <button className="btn btn-primary" onClick={addTodo}>
             Add TodoList
           </button>
+
+          <NewTodoForm></NewTodoForm>
         </div>
       </div>
     </div>
