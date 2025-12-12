@@ -27,6 +27,8 @@ function App() {
   //   },
   // ];
 
+  const [showAddTodoForm, setShowAddTodoForm] = useState(false);
+
   const [todoList, setTodoList] = useState([
     {
       rowNumber: 1,
@@ -84,11 +86,14 @@ function App() {
             todoList={todoList}
             deleteTodoList={deleteTodoList}
           ></TodoTableItems>
-          {/* <button className="btn btn-primary" onClick={addTodo}>
-            Add TodoList
-          </button> */}
+          <button
+            className="btn btn-primary"
+            onClick={() => setShowAddTodoForm(!showAddTodoForm)}
+          >
+            {showAddTodoForm ? "Close Todo" : "New Todo"}
+          </button>
 
-          <NewTodoForm addTodo={addTodo}></NewTodoForm>
+          {showAddTodoForm && <NewTodoForm addTodo={addTodo}></NewTodoForm>}
         </div>
       </div>
     </div>
