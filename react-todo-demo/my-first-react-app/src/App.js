@@ -18,6 +18,11 @@ function App() {
       rowDescription: "Make Dinner For Puppy",
       rowAssigned: "User One",
     },
+    {
+      rowNumber: 4,
+      rowDescription: "Charging the Phone Battery",
+      rowAssigned: "User One",
+    },
   ];
   return (
     <div className="mt-5 conatiner">
