@@ -1,65 +1,114 @@
-# React_SprintBoot_Udemy_ChandDarby
+# React + Spring Boot Full Stack Guide
 
-React_SprintBoot_Udemy_ChandDarby
+## 📂 Project Repository
 
-#Source code :
+Clone the source code:
+
+```bash
 git clone -c core.longpaths=true https://github.com/darbyluv2code/fullstack-react-and-springboot.git
+```
 
-# installation guides links for React and springboot
+---
 
-https://github.com/darbyluv2code/fullstack-react-and-springboot/tree/main/install-react-tools/ms-windows
+## 🔗 Installation Guides
 
-# install tsc
+- [React Tools Installation (Windows)](https://github.com/darbyluv2code/fullstack-react-and-springboot/tree/main/install-react-tools/ms-windows)
+- [Official React Documentation](https://react.dev/)
+- [Bootstrap](https://getbootstrap.com/)
 
-npm install --location=global typescript@4.7.4
+---
 
-# add the following into environment variable for tsc access
+## ⚛️ React Setup
 
-C:\Users\bmudaliy\AppData\Roaming\npm
+### Create a React App
 
-# official react site
-
-https://react.dev/
-
-# Command for creating react app
-
+```bash
 npx create-react-app my-first-react-app
+```
 
-# running the application
+### Run the Application
 
-cd my-app
+```bash
+cd my-first-react-app
 npm start
+```
 
-# change of port
+### Change Default Port
 
+```bash
 set PORT=5100 && npm start
+```
 
-# Use to execute if we get error while creating react application
+### If you encounter errors while creating the app:
 
+```bash
 npm install web-vitals
+```
 
-# Local:
+**Local Development URL:**
 
+```
 http://localhost:3000
+```
 
-#Bootstrap
-https://getbootstrap.com/
+---
 
-# adding bootstrap configuration in index.html
+## 🎨 Adding Bootstrap
 
-# Inside the Header :
+Add the following to `public/index.html`:
 
-   <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+**Inside `<head>`:**
 
-# Inside the Body :
+```html
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+```
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+**Inside `<body>`:**
+
+```html
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+```
+
+---
+
+## 🟦 TypeScript Setup
+
+TypeScript is a **superset of JavaScript** used for building Angular and React applications.
+
+### Install TypeScript Globally
+
+```bash
+npm install --location=global typescript@4.7.4
+```
+
+Add the following to your **Environment Variables** for global access:
+
+```
+C:\Users\<your-username>\AppData\Roaming\npm
+```
+
+### Transpiling TypeScript
+
+Transpiling means translating and compiling TypeScript files into JavaScript.
+
+Steps:
+
+1. Compile TypeScript file:
+   ```bash
+   tsc fileName.ts
+   ```
+2. Execute the generated JavaScript file:
+   ```bash
+   node fileName.js
+   ```
+
+**Note:** Always make changes in the `.ts` file, then recompile to `.js`.
