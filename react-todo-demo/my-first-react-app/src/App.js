@@ -50,12 +50,12 @@ function App() {
     },
   ]);
 
-  const addTodo = () => {
+  const addTodo = (description, assigned) => {
     if (todoList.length > 0) {
       const newTodoList = {
         rowNumber: todoList.length + 1,
-        rowDescription: "New Todo",
-        rowAssigned: "User Threee",
+        rowDescription: description,
+        rowAssigned: assigned,
       };
 
       setTodoList((todoList) => [...todoList, newTodoList]);
@@ -72,7 +72,7 @@ function App() {
             Add TodoList
           </button>
 
-          <NewTodoForm></NewTodoForm>
+          <NewTodoForm addTodo={addTodo}></NewTodoForm>
         </div>
       </div>
     </div>
