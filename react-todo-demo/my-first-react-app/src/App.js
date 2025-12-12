@@ -24,6 +24,18 @@ function App() {
       rowAssigned: "User One",
     },
   ];
+
+  const addTodo = () => {
+    if (todoList.length > 0) {
+      const newTodoList = {
+        rowNumber: todoList.length + 1,
+        rowDescription: "New Todo",
+        rowAssigned: "User Threee",
+      };
+      todoList.push(newTodoList);
+      console.log("The TodoList :" + JSON.stringify(todoList));
+    }
+  };
   return (
     <div className="mt-5 conatiner">
       <div className="card">
@@ -31,6 +43,9 @@ function App() {
 
         <div className="card-body">
           <TodoTableItems todoList={todoList}></TodoTableItems>
+          <button className="btn btn-primary" onClick={addTodo}>
+            Add TodoList
+          </button>
         </div>
       </div>
     </div>
