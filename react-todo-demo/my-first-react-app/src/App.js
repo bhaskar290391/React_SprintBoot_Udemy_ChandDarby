@@ -51,16 +51,22 @@ function App() {
   ]);
 
   const addTodo = (description, assigned) => {
-    if (todoList.length > 0) {
-      const newTodoList = {
-        rowNumber: todoList.length + 1,
-        rowDescription: description,
-        rowAssigned: assigned,
-      };
+    let rowNumber = 0;
 
-      setTodoList((todoList) => [...todoList, newTodoList]);
+    if (todoList.length > 0) {
+      rowNumber = todoList[todoList.length - 1].rowNumber + 1;
+    } else {
+      rowNumber = 1;
     }
+    const newTodoList = {
+      rowNumber: rowNumber,
+      rowDescription: description,
+      rowAssigned: assigned,
+    };
+
+    setTodoList((todoList) => [...todoList, newTodoList]);
   };
+
   return (
     <div className="mt-5 conatiner">
       <div className="card">
@@ -78,5 +84,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
